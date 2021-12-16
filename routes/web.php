@@ -13,10 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-$name = 'Nicola';
-$surname = 'Perera';
-$age = '25';
+$data = [
+    'name' => 'Nicola',
+    'surname' => 'Perera',
+    'age' => '25',
+];
 
 Route::get('/', function () {
-    return view('home', 'name', 'surname', 'age');
+    return view('home', $data);
 });
