@@ -14,9 +14,31 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-$name = 'Nicola';
-$surname = 'Perera';
-$age = '25';
 
-    return view('home', compact('name', 'surname', 'age'));
+        return view('home');
+});
+
+// navbar links
+Route::get('/name', function () {
+    $name = 'Nicola';
+    
+        return view('name', compact('name'));
+    });
+
+Route::get('/surname', function () {
+    $surname = 'Perera';
+
+        return view('surname', compact('surname'));
+});
+
+Route::get('/age', function () {
+    $age = '25';
+    
+        return view('age', compact('age'));
+    });
+
+Route::get('/class', function () {
+    $class = '42';
+
+        return view('class', compact('class'));
 });
