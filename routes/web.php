@@ -13,12 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/', function () {
 $data = [
     'name' => 'Nicola',
     'surname' => 'Perera',
     'age' => '25',
 ];
 
-Route::get('/', function () {
     return view('home', $data);
 });
